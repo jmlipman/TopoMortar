@@ -1,0 +1,282 @@
+batch_size: 10
+batch_size_val: 10
+callbacks:
+- lib.callback._start_training_scheduler_init
+- lib.callback._end_train_iteration_save_last_model
+device: cuda
+exp_name: delete
+exp_run: 1
+fold: 1
+full_conf: true
+iteration_start: 1
+iterations: 12000
+framework: supervised
+loss:
+  name: lib.losses.CEDiceLoss
+  params: {}
+metrics_pred:
+- name: lib.metrics.DiceMetric
+- name: lib.metrics.HD95Metric
+  params:
+    voxres:
+    - 1
+    - 1
+- name: lib.metrics.BettiErrorMetric
+metrics_val:
+- name: lib.metrics.DiceMetric
+- name: lib.metrics.HD95Metric
+  params:
+    voxres:
+    - 1
+    - 1
+- name: lib.metrics.BettiErrorMetric
+model:
+  name: monai.networks.nets.DynUNet
+  params:
+    deep_supervision: true
+    deep_supr_num: 6
+    in_channels: 3
+    kernel_size:
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    - 3
+    out_channels: 2
+    spatial_dims: 2
+    strides:
+    - 1
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    upsample_kernel_size:
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+    - 2
+move_config_file: false
+optimizer:
+  name: torch.optim.SGD
+  params:
+    lr: 0.01
+    momentum: 0.99
+    nesterov: true
+    weight_decay: 3.0e-05
+random_seed: 42
+scheduler:
+  name: torch.optim.lr_scheduler.LambdaLR
+  params:
+    lr_lambda: 'lambda ep: (1 - ep/12000)**0.9'
+transform_measure:
+- name: monai.transforms.LoadImaged
+  params:
+    keys:
+    - label
+    - prediction
+- name: monai.transforms.EnsureChannelFirstd
+  params:
+    keys:
+    - label
+    - prediction
+- name: monai.transforms.MapLabelValued
+  params:
+    keys:
+    - label
+    - prediction
+    orig_labels:
+    - 255
+    target_labels:
+    - 1
+- name: monai.transforms.AsDiscreted
+  params:
+    keys:
+    - prediction
+    to_onehot: 2
+transform_post_pred:
+- name: monai.transforms.Activations
+  params:
+    softmax: true
+- name: monai.transforms.AsDiscrete
+  params:
+    argmax: true
+    to_onehot: 2
+transform_post_val:
+- name: monai.transforms.Activations
+  params:
+    softmax: true
+- name: monai.transforms.AsDiscrete
+  params:
+    argmax: true
+    to_onehot: 2
+transform_test:
+- name: monai.transforms.LoadImaged
+  params:
+    keys:
+    - image
+- name: monai.transforms.EnsureChannelFirstd
+  params:
+    keys:
+    - image
+- name: monai.transforms.NormalizeIntensityd
+  params:
+    channel_wise: true
+    keys:
+    - image
+transform_train:
+- name: monai.transforms.LoadImaged
+  params:
+    keys:
+    - image
+    - label
+- name: monai.transforms.EnsureChannelFirstd
+  params:
+    keys:
+    - image
+    - label
+- name: monai.transforms.MapLabelValued
+  params:
+    keys:
+    - label
+    orig_labels:
+    - 255
+    target_labels:
+    - 1
+- name: monai.transforms.NormalizeIntensityd
+  params:
+    channel_wise: true
+    keys:
+    - image
+- name: monai.transforms.RandRotated
+  params:
+    keys:
+    - image
+    - label
+    mode:
+    - bilinear
+    - nearest
+    prob: 0.2
+    range_x:
+    - -3.1415
+    - 3.1415
+    range_y:
+    - -3.1415
+    - 3.1415
+- name: monai.transforms.RandZoomd
+  params:
+    keys:
+    - image
+    - label
+    max_zoom: 1.4
+    min_zoom: 0.7
+    mode:
+    - bilinear
+    - nearest-exact
+    prob: 0.2
+- name: monai.transforms.RandGaussianNoised
+  params:
+    keys:
+    - image
+    mean: 0
+    prob: 0.1
+    std: 0.1
+- name: monai.transforms.RandGaussianSmoothd
+  params:
+    keys: image
+    prob: 0.2
+    sigma_x:
+    - 0.5
+    - 1
+    sigma_y:
+    - 0.5
+    - 1
+    sigma_z:
+    - 0.5
+    - 1
+- name: monai.transforms.RandScaleIntensityd
+  params:
+    factors:
+    - -0.25
+    - 0.25
+    keys: image
+    prob: 0.15
+- name: monai.transforms.RandScaleIntensityFixedMeand
+  params:
+    factors:
+    - -0.25
+    - 0.25
+    keys: image
+    preserve_range: true
+    prob: 0.15
+- name: monai.transforms.RandSimulateLowResolutiond
+  params:
+    align_corners: null
+    downsample_mode: bilinear
+    keys: image
+    prob: 0.25
+    upsample_mode: nearest
+    zoom_range:
+    - 0.5
+    - 1
+- name: monai.transforms.RandAdjustContrastd
+  params:
+    gamma:
+    - 0.7
+    - 1.5
+    invert_image: true
+    keys:
+    - image
+    prob: 0.1
+    retain_stats: true
+- name: monai.transforms.RandAdjustContrastd
+  params:
+    gamma:
+    - 0.7
+    - 1.5
+    invert_image: false
+    keys:
+    - image
+    prob: 0.1
+    retain_stats: true
+- name: monai.transforms.RandAxisFlipd
+  params:
+    keys:
+    - image
+    - label
+    prob: 0.5
+transform_val:
+- name: monai.transforms.LoadImaged
+  params:
+    keys:
+    - image
+    - label
+- name: monai.transforms.EnsureChannelFirstd
+  params:
+    keys:
+    - image
+    - label
+- name: monai.transforms.MapLabelValued
+  params:
+    keys:
+    - label
+    orig_labels:
+    - 255
+    target_labels:
+    - 1
+- name: monai.transforms.NormalizeIntensityd
+  params:
+    channel_wise: true
+    keys:
+    - image
+val_inferer:
+  name: monai.inferers.SimpleInferer
+val_interval: 1200
