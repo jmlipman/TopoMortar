@@ -4,24 +4,56 @@ Official repository of "**TopoMortar: A dataset to evaluate image segmentation m
 This repository contains TopoMortar dataset and the code to evaluate topology loss functions.
 
 ### Latest updates
-📅 XX-Feb-25: Release of TopoMortar dataset.
+📅 05-Mar-25: Release of TopoMortar dataset.
 
 ### TODO
 * ☐ Add Betti Matching error to the metrics.
 * ☐ Add clDice to the metrics.
 
-### Latest results (Last update XX-Feb-25)
+### Latest results (Last update 05-Mar-25)
 [Here](results/PERFORMANCE_TABLES.md), we present an extensive comparison between topology loss functions under different dataset challenges, illustrating when/if topology loss functions are beneficial and truly incorporate prior topology information to the model.
 
 #### Evaluated topology loss functions to date
-* ✅ TopoLoss (Hu et al., 2019, NeurIPS).
-* ✅ TOPO (Oner et al., 2021, TPAMI)
-* ✅ clDice (Shit et al., 2021, CVPR)
-* ✅ Warping (Hu et al, 2022, NeurIPS)
-* ✅ Skeleton Recall (Kirchhoff et al, 2024, ECCV)
-* ✅ cbDice (Shi et al, 2024, MICCAI)
+Rank Loss Type GPU CPU Worked?
 
-Other loss functions that I've tried but I was unable to utilize (more details below, on 3.3 (notes)) were Betti Matching, TopoGrad, CavityLoss.
+<table>
+<thead>
+<tr>
+	<th>Rank</th><th>Loss</th><th>Type</th><th>GPU (GiB)</th><th>Time (h.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>1</td><td>clDice (Shit et al., 2021, CVPR)</td><td>Skeleton</td><td>16.2</td><td>3.1</td>
+</tr>
+<tr>
+	<td>2</td><td>SkelRecall (Kirchhoff et al, 2024, ECCV)</td><td>Skeleton</td><td>5.6</td><td>7.1</td>
+</tr>
+<tr>
+	<td>3</td><td>TopoLoss (Hu et al., 2019, NeurIPS)</td><td>Persistence homology</td><td>5.6</td><td>49.6</td>
+</tr>
+<tr>
+	<td>4</td><td>Warping (Hu et al, 2022, NeurIPS)</td><td>Distance</td><td>5.6</td><td>152.1</td>
+</tr>
+<tr>
+	<td>5</td><td>cbDice (Shi et al, 2024, MICCAI)</td><td>Skeleton</td><td>7.8</td><td>58.3</td>
+</tr>
+<tr>
+	<td>6</td><td>TOPO (Oner et al., 2021, TPAMI)</td><td>Distance</td><td>5.9</td><td>28.8</td>
+</tr>
+<tr>
+	<td>-</td><td>Betti Matching (Stucki et al., 2023, ICML)</td><td>Persistence homology</td><td>-</td><td>-</td>
+</tr>
+<tr>
+	<td>-</td><td>TopoGrad (Clough et al., 2019, ICIPMI)</td><td>Persistence homology</td><td>-</td><td>-</td>
+</tr>
+<tr>
+	<td>-</td><td>CavityLoss (Ngoc et al., 2022, NeurIPS Workshop)</td><td>Persistence homology</td><td>-</td><td>-</td>
+</tr>
+</tbody>
+</table>
+
+More details on why Betti Matching, TopoGrad, and CavityLoss didn't work can be found below, in 3.3 (notes).
 
 ## Table of Contents
 * [1. Introduction](#1-introduction)
