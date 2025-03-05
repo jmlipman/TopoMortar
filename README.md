@@ -13,8 +13,7 @@ This repository contains TopoMortar dataset and the code to evaluate topology lo
 ### Latest results (Last update 05-Mar-25)
 [Here](results/PERFORMANCE_TABLES.md), we present an extensive comparison between topology loss functions under different dataset challenges, illustrating when/if topology loss functions are beneficial and truly incorporate prior topology information to the model.
 
-#### Evaluated topology loss functions to date
-Rank Loss Type GPU CPU Worked?
+#### Ranking of topology loss functions (to date) on TopoMortar without dataset challenges
 
 <table>
 <thead>
