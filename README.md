@@ -240,7 +240,7 @@ As a researcher, you can also contribute in your work by:
 ```bibtex
 @misc{topomortar-valverde,
   author = {Juan Miguel Valverde and Motoya Koga and Nijihiko Otsuka and Anders Bjorholm Dahl},
-  title = {TopoMortar: A dataset to evaluate image segmentation methods focused on topology accuracy}
+  title = {TopoMortar: A dataset to evaluate image segmentation methods focused on topology accuracy},
   year = {2025},
   journal={arXiv preprint arXiv:2503.03365},
 }
