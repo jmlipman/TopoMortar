@@ -239,12 +239,10 @@ As a researcher, you can also contribute in your work by:
 
 ```bibtex
 @misc{topomortar-valverde,
-  author = {Juan Miguel Valverde and Motoya Koga and Nijihiko Otsuka and Anders B. Dahl},
+  author = {Juan Miguel Valverde and Motoya Koga and Nijihiko Otsuka and Anders Bjorholm Dahl},
   title = {TopoMortar: A dataset to evaluate image segmentation methods focused on topology accuracy}
   year = {2025},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/jmlipman/TopoMortar}}
+  journal={arXiv preprint arXiv:2503.03365},
 }
 ```
 
