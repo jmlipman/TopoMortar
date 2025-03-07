@@ -148,7 +148,7 @@ Follow these instructions, and you will be able to run "python train.py..." dire
 ``` cshell
 python -m venv /PATH/envs/topomortar
 source /PATH/envs/topomortar/bin/activate
-git clone git@github.com:jmlipman/TopoMortar.git
+git clone git@github.com:ANONYMOUS/TopoMortar.git
 cd TopoMortar
 ```
 
