@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="TopoMortar: A dataset to evaluate image segmentation methods focused on topology accuracy">
+  <meta property="og:title" content="TopoMortar: A dataset to evaluate image segmentation methods focused on topology accuracy">
+  <meta property="og:description" content="TopoMortar: A dataset to evaluate image segmentation methods focused on topology accuracy">
+  <meta property="og:url" content="URL"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="topomortar,topology,image segmentation,deep learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>TopoMortar</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">TopoMortar: A dataset to evaluate image segmentation methods focused on topology accuracy</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+
+
+            <div class="centered">
+              <div class="author-row">
+                  <div class="col-author text-center">
+                    <a href="https://jmlipman.github.io"  target="_blank"><img src="static/images/miguel.jpg" alt="Juan Miguel Valverde" class="">
+                        <p>Juan Miguel Valverde<sup>1,2</sup></p></a>
+                  </div>
+                  <div class="col-author text-center">
+                    <a href="https://ws.arch.sojo-u.ac.jp/~koga/index.html"  target="_blank"><img src="static/images/koga.jpg" alt="Motoya Koga" class="">
+                    <p>Motoya Koga<sup>3</sup></p></a>
+                  </div>
+                  <div class="col-author text-center">
+                    <a href=""  target="_blank"><img src="static/images/unspecified.png" alt="Nijihiko Otsuka" class="">
+                    <p>Nijihiko Otsuka<sup>3</sup></p></a>
+                  </div>
+                  <div class="col-author text-center">
+                    <a href="http://people.compute.dtu.dk/abda/"  target="_blank"><img src="static/images/anders.png" alt="Anders Bjorholm Dahl" class="">
+                    <p>Anders Bjorholm Dahl<sup>1</sup></p></a>
+                  </div>
+
+              </div>
+
+                  <div class="publication-authors">
+                    <span class="affiliation-block"><sup>1</sup>Department of Applied Mathematics and Computer Science, Technical University of Denmark</span>
+                    <span class="affiliation-block"><sup>2</sup>A.I. Virtanen Institute, University of Eastern Finland</span>
+                    <span class="affiliation-block"><sup>3</sup>Department of Architecture, Faculty of Engineering, Sojo University, Japan</span>
+                  </div>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="notreadyyet.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <span class="link-block">
+                      <a href="notreadyyet.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/jmlipman/TopoMortar" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2503.03365" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+            </div>
+          </div>
+              <div class="column has-text-centered">
+                  <b>Accepted as an <font color="red">Oral presentation at BMVC 2025</font></b>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <img src="static/images/topomortar.png" alt="TopoMortar" />
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Introduction. Topo-what?</h2>
+        <div class="content has-text-justified">
+          <p>
+          Deep learning-based image segmentation methods currently achieve state-of-the-art performance, but they lack guarantees on structural connectivity at inference time. For example, these models may fail to preserve the correct topology of anatomies like blood vessels, which we know should remain connected. This limitation underscores the need for <b>methods that explicitly improve topological accuracy</b>, and <b>topology-level evaluation metrics</b>, such as Betti errors (which quantify discrepancies in connected components and holes).
+          </p>
+          <table width="100%">
+            <tr><td width="100%" align="center">
+              <img src="static/images/importance_of_topology.png">
+            </td></tr>
+            <tr><td>
+                    <i>Pixel-level metrics (Dice coefficient, accuracy) are important to measure, but, alone, they do not reflect segmentation quality—for that, distance-level and topology-level metrics can be complementary measured.</i>
+                </td></tr>
+          </table>
+
+          <p>
+          Current datasets used to evaluate topology-focused methods have limitations that make it difficult to determine whether methods truly improve topology accuracy. For example, suppose a method demonstrates better topological accuracy across multiple blood vessel segmentation datasets for <a href="https://en.wikipedia.org/wiki/Fundus_photography" target="_blank" style="text-decoration: underline">fundus retina images</a>. Claiming that this method universally improves topology would be an overgeneralization; the improvements might instead stem from factors like:
+          </p>
+            <ul>
+            <li>The method’s specific suitability for <b>blood vessel segmentation</b>,</li>
+            <li>The method’s specific suitability for <b>fundus retina images</b>, or</li>
+            <li>Its ability to address <b>dataset-specific challenges</b> (e.g., class imbalance), which could indirectly boost topological accuracy by first improving standard metrics like the Dice coefficient.</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Issues with existing datasets</h2>
+        <div class="content has-text-justified">
+        <p>
+        In addition to the inability of separating dataset task from dataset challenge, existing datasets that are popular for evaluating topology loss functions have several critical issues.
+        These issues have not been reported or discussed. If they were tackled in previous work, it is unclear how, hindering reproducibility.
+        </p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/drive.png" alt="DRIVE dataset"/>
+        <h2 class="subtitle has-text-centered">
+            The DRIVE dataset is the most popular dataset among researchers evaluating topology loss functions. DRIVE is <b>extremely small</b>; it contains only 40 images, and only 20 of them are labelled.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/mass.png" alt="Massachusetts Roads dataset"/>
+        <h2 class="subtitle has-text-centered">
+            The Massachusetts Roads dataset is the second most popular dataset. However, it contains <b>corrupted images</b> where random areas are covered in white while, in contrast, their labels seem to be okay.
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/cremi.png" alt="CREMI dataset"/>
+        <h2 class="subtitle has-text-centered">
+            The CREMI dataset has been used to derive a task different from the original task; instead of segmenting axons, topology loss function papers have used CREMI to segment the area surrounding the axons (myelin in most cases). The issue is that how such area has been derived has been unreported, and one could end up with segmentations with very different topology depending on the threshold used. CREMI is also problematic for evaluating Betti 1 error due to an additional reason: since CREMI has a lot of holes, a method that leads to wrong holes appears as better than a method with fewer holes but more accurate segmentation (we report this in Appendix E in our <a href="https://arxiv.org/abs/2503.05541" target="_blank" style="text-decoration: underline">CoLeTra paper</a>).
+       </h2>
+     </div>
+     <div class="item">
+      <!-- Your image here -->
+      <img src="static/images/cracktree.png" alt="CrackTree dataset"/>
+      <h2 class="subtitle has-text-centered">
+          The labels in the CrackTree dataset are 1-pixel width lines (i.e., the labels are noisy).
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- End image carousel -->
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Issues with previous work</h2>
+        <div class="content has-text-justified">
+            <p><b>❌ Running time and GPU requirements</b> have been largely unreported. This is important because certain methods (e.g., those based on persistence homology) are extremely time consuming. We report running time and GPU mem. requirements in Appendix O.</p>
+            <p>❌ Experiments have been run with only <b>one random seed</b> (see Table 1 in Appendix D). We observed that any topology loss function can be made look advantageous if the "right" random seed is chosen (see Table 7 in Appendix I)</p>
+            <p>❌ Experiments have been run utipzing <b>no data augmentation</b> (see Table 1 in Appendix D). If the advantageousness of a method disappears when using data augmentation, is it really useful?</p>
+            <p>❌ Experiments have been run utipzing the <b>old 2015 UNet</b> architecture (see Table 1 in Appendix D). If the advantageousness of a method disappears when using a more modern architecture (e.g., the one used in nnUNet), is the method really useful?</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">TopoMortar in a nutshell 🥜</h2>
+        <div class="content has-text-justified">
+              <p>
+              🧱 TopoMortar is a novel dataset designed to rigorously evaluate whether topology-focused methods do truly improve topology accuracy. Unlike existing datasets, TopoMortar:
+              </p>
+                <ul>
+                <li>Can simulate real-world dataset challenges while controlling for confounding factors, and</li>
+                <li>Focuses on mortar segmentation in brick walls—a relatively simple task where, in contrast to existing datasets that are more complex, an improvement in topology accuracy in TopoMortar is less likely to be due to a more suitable choice of the neural network, optimizer, training time, etc.</li>
+                </ul>
+               <p>
+               This controlled approach enables researchers to determine if and when topology improving methods do actually work, rather than just whether they improve performance on datasets with varied challenges (e.g., class imbalance, noisy labels) and characteristics.
+              </p>
+
+               <table width="100%">
+                   <tr><td>Dataset size</td><td>420 images (PNG) (291 MB)</td></tr>
+                   <tr><td>Image size</td><td>512 x 512</td></tr>
+                   <tr><td>Classes</td><td>0: Background, 1: Mortar</td></tr>
+                   <tr><td>Fixed training-test-validation set split</td><td>✅</td></tr>
+                   <tr><td>Fixed "small" training set, fixed "large" training set</td><td>✅</td></tr>
+                   <tr><td>Accurate, manually-annotated labels</td><td>✅ Available for all images</td></tr>
+                   <tr><td>Noisy labels</td><td>✅ Available for the training and validation sets</td></tr>
+                   <tr><td>Pseudo-labels</td><td>✅ Available for the training and validation sets</td></tr>
+                   <tr><td>In-distribution test-set images</td><td>✅</td></tr>
+                   <tr><td>Out-of-distribution test-set images</td><td>✅ Angles, Colors, Graffitis, Objects, Occlusion, Shadows</td></tr>
+                   <tr><td>Amodal segmentation?</td><td>✅ "Occlusion" test set</td></tr>
+               </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">How to use TopoMortar?</h2>
+        <div class="content has-text-justified">
+            <ul>
+                <li>The dataset, and the files specifying the splits and out-of-distribution category are available in <a href="https://github.com/jmlipman/TopoMortar/tree/main/dataset" target="_blank" style="text-decoration: underline">Github</a>.</li>
+                <li>When utilizing TopoMortar, it is important to report which labels were used to train the models (accurate, noisy, pseudo), which training set was used (large, small), and report performance in the in-distribution and out-of-distribution test sets separately.</li>
+                <li>To achieve excellent performance, utilize data augmentation (we employed 10 augmentations, see Appendix G).</li>
+                <li>Run your experiments with multiple random seeds (we utilized 10).</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+            <p>
+            In addition to presenting TopoMortar dataset, we conducted several experiments aiming at answering  research questions important for the topology community.
+            </p>
+            <ol>
+                <li>Do dataset challenges in existing datasets impact on the effectiveness of topology loss functions? Can we improve topology accuracy in a simple way without even using topology loss functions? E.g., by increasing the training set size, by using data augmentation, or by using a method for learning from noisy labels.</li>
+                <li>What is the effectiveness of topology loss functions in a 🧱 dataset 🧱 with a simple task and without dataset challenges? In such scenario, it is difficult for a method to exploit dataset particularities/challenges to improve topology accuray.</li>
+                <li>What is the effectiveness of topology loss functions under specific, controlled dataset challenges? ((a) small training set size, (b) training set with pseudo-labels, (c) noisy labels, and (d) out-of-distribution test set-images)</li>
+                <li>Can we increase topology accuracy without topology loss functions by merely tackling the dataset challenges? What if we tackle such challenges AND also use topology loss functions?</li>
+            </ol>
+        </div>
+        <h2 class="title is-3">Conclusions</h2>
+        <div class="content has-text-justified">
+            <ul>
+                <li>Some topology loss functions are extremely expensive to use and are not generally advantageous.</li>
+                <li>The advantageousness of most topology loss functions depends on the specific dataset particuliarities and/or challenges.</li>
+                <li>clDice loss function has been shown to consistenly improve topology accuracy.</li>
+                <li>🧱 TopoMortar allows to portray different dataset challenges successfully, and the conclusions obtained on TopoMortar are extrapolable to real-world datasets (see Appendix P).</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+@article{valverde2025topomortar,
+  title={TopoMortar: A dataset to evaluate image segmentation methods focused on topology accuracy},
+  author={Valverde, Juan Miguel and Koga, Motoya and Otsuka, Nijihiko and Dahl, Anders Bjorholm},
+  booktitle={36th British Machine Vision Conference 2025, {BMVC} 2025, Sheffield, UK, November 24-27, 2025},
+  publisher={BMVA},
+  year={2025}
+}
+</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
