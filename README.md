@@ -5,7 +5,9 @@ This repository contains TopoMortar dataset and the code to evaluate topology lo
 
 ### Latest updates
 📅 07-Aug-25: TopoMortar project page: [https://jmlipman.github.io/TopoMortar](https://jmlipman.github.io/TopoMortar)
+
 📅 25-Jul-25: TopoMortar accepted at **BMVC 2025 as an Oral presentation**.
+
 📅 05-Mar-25: Release of TopoMortar dataset.
 
 ### TODO
