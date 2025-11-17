@@ -243,11 +243,13 @@ As a researcher, you can also contribute in your work by:
 ## 5. Citation
 
 ```bibtex
-@misc{topomortar-valverde,
-  author = {Juan Miguel Valverde and Motoya Koga and Nijihiko Otsuka and Anders Bjorholm Dahl},
-  title = {TopoMortar: A dataset to evaluate image segmentation methods focused on topology accuracy},
+@inproceedings{Valverde_2025_BMVC,
+  author = {Juan Miguel Valverde and Motoya Koga and Nijihiko Otsuka and Anders Dahl},
+  title = {TopoMortar: A Dataset to Evaluate Topology Accuracy in Image Segmentation},
+  booktitle = {36th British Machine Vision Conference 2025, {BMVC} 2025, Sheffield, UK, November 24-27, 2025},
+  publisher = {BMVA},
   year = {2025},
-  journal={arXiv preprint arXiv:2503.03365},
+  url = {https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_596/paper.pdf}
 }
 ```
 
